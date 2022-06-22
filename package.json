@@ -3,10 +3,13 @@
   "version": "1.0.0-beta.1",
   "description": "Discover, Install, Uninstall, Submit, Remove Adobe App Builder templates",
   "dependencies": {
+    "@adobe/aio-lib-console": "^3.2.0",
+    "@adobe/aio-lib-console-project-installation": "github:adobe/aio-lib-console-project-installation#DEVX-2298",
     "@adobe/aio-lib-core-config": "^2.0.0",
     "@adobe/aio-lib-core-logging": "^1.1.0",
     "@adobe/aio-lib-ims": "^4.3.0",
     "@adobe/aio-lib-templates": "^1.1.0",
+    "@adobe/generator-app-asset-compute": "^0.2.2",
     "@oclif/command": "^1.8.16",
     "@oclif/plugin-help": "^2.2.3",
     "chalk": "^4.1.2",
@@ -66,7 +69,9 @@
     "unit-tests": "jest --ci",
     "prepack": "oclif-dev manifest && oclif-dev readme",
     "postpack": "rm -f oclif.manifest.json",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "lint:check": "eslint --ext .js .",
+    "lint:fix": "eslint --ext .js --fix ."
   },
   "jest": {
     "collectCoverage": true,
